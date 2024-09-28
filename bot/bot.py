@@ -47,7 +47,7 @@ async def process_message(channel, user_message, use_history=True):
             history = await fetch_conversation_history(channel)
             history.append(HumanMessage(content=user_message))
         else:
-            history = [HumanMessage(content=user_message)]  # 履歴を使用しない場合
+            history = [HumanMessage(content=user_message)]
 
         llm = ChatOpenAI(
             temperature=0.7,
