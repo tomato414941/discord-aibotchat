@@ -9,7 +9,7 @@ Discord AI Bot Chat is a LangChain-powered bot that seamlessly integrates into y
 ## Features
 
 * **Intelligent Conversations:** Engage in natural language conversations with the AI using the `/ask` command or simply by mentioning the bot.
-* **Contextual Understanding:** The bot maintains conversation history, allowing for more contextually relevant and meaningful responses.
+* **Contextual Understanding:** The bot maintains conversation history **when you mention it**, allowing for more contextually relevant and meaningful responses. **The `/ask` command does not consider conversation history.** 
 * **Powered by LangChain:** Leverages the power of LangChain for advanced language model interactions and seamless integration with OpenAI's GPT-4o.
 * **Easy to Use:** Simple setup and intuitive commands make it easy for anyone to interact with the AI.
 * **Always Improving:** We are constantly working to enhance the bot's capabilities and add new features.
@@ -30,7 +30,7 @@ discord-aibotchat/
 ```
 
 * `bot/`: Contains the core bot logic
-    * `bot.py`: Implements the main bot functionality, slash commands, and event handlers
+    * `bot.py`: Implements the main bot functionality, slash commands, and event handlers
 * `.env`: Stores environment variables (tokens, API keys, etc.)
 * `.gitignore`: Specifies files that Git should ignore
 * `requirements.txt`: Lists project dependencies
@@ -46,47 +46,47 @@ discord-aibotchat/
 
 1. **Clone the repository:**
 
-   ```bash
+   ```bash
    git clone [https://github.com/tomato414941/discord-aibotchat.git](https://github.com/tomato414941/discord-aibotchat.git)
    cd discord-aibotchat
    ```
 
 2. **Create and activate a virtual environment:**
 
-   ```bash
+   ```bash
    python -m venv .venv
    source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
    ```
 
 3. **Install the required packages:**
 
-   ```bash
+   ```bash
    pip install -r requirements.txt
    ```
 
 4. **Create a `.env` file and add the following content:**
 
-   ```bash
+   ```bash
    DISCORD_TOKEN=your_discord_bot_token
    OPENAI_API_KEY=your_openai_api_key
    ```
 
-   * Replace `your_discord_bot_token` with your actual Discord Bot Token.
-   * Replace `your_openai_api_key` with your actual OpenAI API key.
+   * Replace `your_discord_bot_token` with your actual Discord Bot Token.
+   * Replace `your_openai_api_key` with your actual OpenAI API key.
 
 5. **Run the bot:**
 
-   ```bash
+   ```bash
    python bot/bot.py
    ```
 
 ## Usage
 
 1. **Using the `/ask` slash command:**
-   * `/ask message:<your_message>` - Ask the AI a question without considering conversation history.
+   * `/ask message:<your_message>` - Ask the AI a question without considering conversation history.
 
 2. **Mentioning the bot:**
-   * Simply mention the bot followed by your message, e.g., `@AI Bot Chat Hello, how are you?` The bot will consider the conversation history in the channel.
+   * Simply mention the bot followed by your message, e.g., `@AI Bot Chat Hello, how are you?` The bot will consider the conversation history in the channel.
 
 **Examples:**
 
