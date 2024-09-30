@@ -64,7 +64,14 @@ discord-aibotchat/
    pip install -r requirements.txt
    ```
 
-4. **Create a `.env` file and add the following content:**
+4. **Create a PostgreSQL database on Railway**
+
+   * Go to your Railway project dashboard.
+   * Click the `New Service` button at the top of the screen
+   * Select `Provision PostgreSQL` from the list of services.
+   * Enter a name for your database and click `Deploy`.
+
+5. **Create a `.env` file and add the following content:**
 
    ```bash
    DISCORD_TOKEN=your_discord_bot_token
@@ -73,8 +80,9 @@ discord-aibotchat/
 
    * Replace `your_discord_bot_token` with your actual Discord Bot Token.
    * Replace `your_openai_api_key` with your actual OpenAI API key.
+   * Add the `DATABASE_URL` environment variable provided by Railway after creating the PostgreSQL database
 
-5. **Run the bot:**
+6. **Run the bot:**
 
    ```bash
    python bot/bot.py
